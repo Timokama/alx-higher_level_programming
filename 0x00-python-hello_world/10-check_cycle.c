@@ -15,10 +15,10 @@ int check_cycle(listint_t *list)
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	first = list->next;
-	last = list->next->next;
+	first = list;
+	last = first->next;
 
-	while (first && last && last->next)
+	while (first != NULL && last->next != NULL && first->next->next != NULL)
 	{
 		if (first == last)
 			return (1);
