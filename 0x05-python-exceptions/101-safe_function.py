@@ -3,6 +3,7 @@
 import traceback as tb
 
 def safe_function(fct, *args):
+    """Executes a function safely."""
     try:
         result = fct(*args)
 
