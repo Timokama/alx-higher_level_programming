@@ -69,7 +69,7 @@ class Rectangle:
         """Method to compute perimeter length of Rectangle instance.
         Returns: 2 * (w + h) if both `width` and `height` > 0, else 0.
         """
-        return 2*(self.width + self.height) * bool(self.width and self.height)
+        return 2 * (self.width + self.height) * bool(self.width and self.height)
     def __str__(self):
         """Format Rectangle instance for printing as a grid of `#`.
 
