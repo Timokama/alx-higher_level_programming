@@ -5,17 +5,14 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
     if type(matrix) is not list:
-        raise TypeError('matrix must be a matrix (list of lists) '
-                'of integers/floats')
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     types_row = map(lambda x: isinstance(x, list), matrix)
     if not all(types_row):
-        raise TypeError('matrix must be a matrix (list of lists) '
-                'of integers/floats')
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for row in matrix:
         types_elements = map(lambda x: isinstance(x,(float, int)), row)
         if not all(types_elements):
-            raise TypeError('matrix must be a matrix (list of lists) '
-                    'of integers/floats')
+            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for row in matrix:
         types_element = map(lambda x: x == x
                 and x != float('inf')
