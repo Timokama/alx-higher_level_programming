@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
     Write a function that multiplies 2 matrices:
     Read: Matrix multiplication - only Matrix product (two matrices)
@@ -33,6 +34,7 @@
 
 def transpose(matrix):
     """ transpose a matrix """
+    
     new_matrix = []
     for column in matrix[0]:
         new_matrix.append([])
@@ -43,6 +45,7 @@ def transpose(matrix):
 
 
 def dot_product(row_a, row_b):
+
     """ multiply dot 2 matrix """
     sum = 0
     for index, item in enumerate(row_a):
@@ -62,8 +65,9 @@ def mult(m_a, m_b):
             result = dot_product(row_a, row_b)
             new_matrix[index_a].append(result)
     return new_matrix
+
     
-    def matrix_mul(m_a, m_b):
+def matrix_mul(m_a, m_b):
     """ matrix produc """
     a_list_error = "m_a must be a list"
     b_list_error = "m_b must be a list"
@@ -77,9 +81,9 @@ def mult(m_a, m_b):
     b_rect_error = "each row of m_b must be of the same size"
     cant_mult_error = "m_a and m_b can't be multiplied"
     if type(m_a) is not list:
-        raise TypeError(a_list_error)
+       raise TypeError(a_list_error)
     if type(m_b) is not list:
-        raise TypeError(b_list_error)
+       raise TypeError(b_list_error)
     for row in m_a:
         if type(row) is not list:
             raise TypeError(a_list_list_error)
