@@ -49,9 +49,9 @@ class Square(Rectangle):
             self.size
         )
 
-def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """Update Square instances with *args and **kwargs.
-        Order of *args is 'id', 'size', 'x', 'y'. **kwargs can be in
+            Order of *args is 'id', 'size', 'x', 'y'. **kwargs can be in
         any order.
         Example:
             >>> s = Square(1)
@@ -66,13 +66,13 @@ def update(self, *args, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
 
-def to_dictionary(self):
-    """Return dictionary representation of writable attributes.
+    def to_dictionary(self):
+        """Return dictionary representation of writable attributes.
 
-    Example:
+        Example:
         >>> s = Square(1, 2, 3, 4)
         >>> s.to_dictionary()
         {"id": 4, "size": 1, "x": 2, "y": 3}
-    """
-    attrs = ["id", "x", "size", "y"]
-    return {k: getattr(self, k) for k in attrs}
+        """
+        attrs = ["id", "x", "size", "y"]
+        return {k: getattr(self, k) for k in attrs}
