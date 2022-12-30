@@ -8,7 +8,7 @@ if __name__ == '__main__':
     commands.execute("SELECT cities.id, cities.name, states.name FROM\
     cities JOIN states ON cities.state_id = states.id\
     ORDER BY cities.id ASC")
-    usa = command.fetchall()
+    usa = commands.fetchall()
     comma_print = 0
     for state in usa:
         if state[2] == argv[4]:
@@ -17,5 +17,5 @@ if __name__ == '__main__':
             print("{:s}".format(state[1]), end="")
             comma_print +=1
     print("")
-    command.close()
+    commands.close()
     the_usa.close()
