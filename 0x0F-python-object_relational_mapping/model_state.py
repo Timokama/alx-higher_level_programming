@@ -6,6 +6,12 @@ Base = declarative_base()
 
 
 class State(Base):
+    """Class representing the `states` table.
+     Columns:
+         id (int): /NOT NULL/AUTO_INCREMENT/PRIMARY_KEY/
+         name (string): /VARCHAR(128)/NOT NULL/
+    """
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True, nullable=False,
                 autoincrement=True)
     name = Column(String(128), nullable=False)
