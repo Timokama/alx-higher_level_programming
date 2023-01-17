@@ -2,7 +2,7 @@
 """Fetch URL using requests package"""
 
 if __name__ == "__main__":
-    from request import get
+    from requests import get
 
     try:
         r = get('https://intranet.hbtn.io/status')
